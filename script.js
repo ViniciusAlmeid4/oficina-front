@@ -10,7 +10,7 @@ fetch("https://api.disneyapi.dev/character?pageSize=24")
         <div class="card">
             <div class="card-body d-flex justify-content-center align-items-center flex-column">
                 <div class="mb-2">
-                  <img src="${personagem.imageUrl}" alt="card-personagem">
+                  <img src="${personagem.imageUrl}" alt="card-personagem" onerror="this.onerror = null; this.src='img/placeholder_error.png';">
                 </div>
                 
                 <div>
