@@ -1,12 +1,30 @@
-fetch("https://api.disneyapi.dev/character?pageSize=24")
-  .then((resposta) => resposta.json())
-  .then((dados) => {
-    console.log(dados.info)
+let paginaAtual = 1
+let totalPaginas = 1
 
-    let container = document.querySelector(".conteudo");
+let btnProximo = document.querySelector("#btn-proximo")
+let btnAnterior = document.querySelector("#btn-anterior")
+let indice = document.querySelector("#indice")
 
-    dados.data.forEach((personagem)=>{
-      container.innerHTML += `
+function carregarPersonagens(pagina) {
+  if (pagina > totalPaginas || pagina < 1) {
+    return
+  }
+
+  paginaAtual = pagina
+
+  indice.innerHTML = pagina
+
+  fetch(`https://api.disneyapi.dev/character?page=${pagina}&pageSize=24`)
+    .then((resposta) => resposta.json())
+    .then((dados) => {
+      totalPaginas = dados.info.totalPages
+
+      let container = document.querySelector(".conteudo");
+
+      container.innerHTML = ""
+
+      dados.data.forEach((personagem) => {
+        container.innerHTML += `
         <div class="card">
             <div class="card-body d-flex justify-content-center align-items-center flex-column">
                 <div class="mb-2">
@@ -21,9 +39,25 @@ fetch("https://api.disneyapi.dev/character?pageSize=24")
             </div>
         </div>
       `;
-    }) 
-  })
+      })
+    })
 
-  .catch((erro) => {
-    console.error(erro);
-  });
+    .catch((erro) => {
+      console.error(erro);
+    });
+}
+
+btnProximo.addEventListener("click", () => {
+  carregarPersonagens(paginaAtual + 1)
+})
+
+btnAnterior.addEventListener("click", () => {
+  carregarPersonagens(paginaAtual - 1)
+})
+
+carregarPersonagens(paginaAtual)
+
+
+
+
+
