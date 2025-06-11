@@ -6,6 +6,10 @@ body{
     background-attachment: fixed;
 }
 
+body *{
+    border: 1px solid red;
+}
+
 
 @font-face{
     font-family: "Disney Font";
@@ -20,4 +24,8 @@ body{
     font-family: Disney Font; 
     font-size: 30px;
     color: white;
+}
+
+.card img{
+    height: 10em;
 }
