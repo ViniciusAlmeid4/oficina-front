@@ -1,0 +1,23 @@
+body{
+    background-image: url("img/disney_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+@font-face{
+    font-family: "Disney Font";
+    src: url("fonts/NewWaltDisneyFontRegular-BPen.ttf");
+}
+
+.navbar{
+    background-color: rgb(19, 166, 235);
+}
+
+.navbar-brand{
+    font-family: Disney Font; 
+    font-size: 30px;
+    color: white;
+}
