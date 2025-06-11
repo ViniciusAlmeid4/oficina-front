@@ -13,10 +13,6 @@ body{
     src: url("fonts/NewWaltDisneyFontRegular-BPen.ttf");
 }
 
-body *{
-    border: 1px solid red;
-}
-
 /* formatação geral */
 
 
@@ -24,7 +20,7 @@ body *{
 /* cabeçalho */
 
 .navbar{
-    background-color: rgb(19, 166, 235);
+    background-color: rgb(78, 138, 194);
 }
 
 .navbar-brand{
@@ -41,6 +37,7 @@ body *{
 .conteudo .card{
     width: 300px;
     height: 300px;
+    background-color: rgb(78, 138, 194);
 }
 
 .conteudo .card img{
