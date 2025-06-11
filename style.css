@@ -13,6 +13,10 @@ body{
     src: url("fonts/NewWaltDisneyFontRegular-BPen.ttf");
 }
 
+body *{
+    border: 1px solid red;
+}
+
 /* formatação geral */
 
 
@@ -34,23 +38,23 @@ body{
 
 /* conteudo dos cards */
 
-.card{
+.conteudo .card{
     width: 300px;
     height: 300px;
 }
 
-.card img{
+.conteudo .card img{
     width: 240px;
     height: 150px;
     border-radius: 12px;
 }
 
-.card h6{
+.conteudo .card h6{
     font-size: 20px;
     text-align: center;
 }
 
-.card span{
+.conteudo .card span{
     font-weight: 600;
 }
 

@@ -1,7 +1,7 @@
 fetch("https://api.disneyapi.dev/character?pageSize=24")
   .then((resposta) => resposta.json())
   .then((dados) => {
-    console.log(dados.data)
+    console.log(dados.info)
 
     let container = document.querySelector(".conteudo");
 
