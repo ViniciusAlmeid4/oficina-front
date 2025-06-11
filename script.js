@@ -15,8 +15,8 @@ fetch("https://api.disneyapi.dev/character?pageSize=24")
                 
                 <div>
                   <h6>${personagem.name || "Personagem"}</h3>
-                  <div><strong>Filmes: </strong>${personagem.films[0] || "N/A"}</div>
-                  <div><strong>Séries de TV: </strong>${personagem.tvShows[0] || "N/A"}</div>  
+                  <div><span>Filmes: </span>${personagem.films[0] || "N/A"}</div>
+                  <div><span>Séries de TV: </span>${personagem.tvShows[0] || "N/A"}</div>  
                 </div>
             </div>
         </div>
