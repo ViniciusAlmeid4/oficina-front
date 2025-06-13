@@ -41,7 +41,7 @@ body{
 }
 
 .conteudo .card img{
-    width: 240px;
+    /* width: 240px; */
     height: 150px;
     border-radius: 12px;
 }
